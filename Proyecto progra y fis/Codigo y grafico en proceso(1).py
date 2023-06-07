@@ -1,0 +1,89 @@
+import pandas as pd  # Importa la biblioteca pandas y la asigna al alias 'pd'
+import tkinter as tk  # Importa la biblioteca tkinter y la asigna al alias 'tk'
+from matplotlib.figure import Figure  # Importa la clase Figure del modulo matplotlib.figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg  # Importa la clase FigureCanvasTkAgg del modulo matplotlib.backends.backend_tkagg
+from PIL import Image, ImageTk  # Importa las clases Image y ImageTk del modulo PIL
+
+def calcular_energia_cinetica():
+    # Esta función realiza el cálculo de la energía cinética y actualiza la interfaz gráfica con el resultado.
+
+    masa = float(entry_masa.get())  # Obtiene el valor de masa ingresado en la entrada de texto y lo convierte a tipo float
+    velocidad = float(entry_velocidad.get())  # Obtiene el valor de velocidad ingresado en la entrada de texto y lo convierte a tipo float
+
+    energia_cinetica = 0.5 * masa * velocidad**2  # Calcula la energía cinética utilizando la fórmula adecuada
+
+    mensaje_energia_cinetica = "El valor de la energía cinética es de: {:.2f} J".format(energia_cinetica)  # Crea el mensaje con el valor de la energía cinética formateado con dos decimales
+    label_energia_cinetica.configure(text=mensaje_energia_cinetica)  # Actualiza el texto de la etiqueta con el mensaje de la energía cinética
+
+    df = pd.DataFrame({'Energía Cinética': [energia_cinetica]})  # Crea un DataFrame de pandas con la energía cinética para su uso en la representación gráfica
+
+    for widget in frame_grafico.winfo_children():
+        widget.destroy()
+    # Elimina todos los widgets hijos del marco gráfico para limpiarlo antes de mostrar el nuevo gráfico
+
+    figura = Figure(figsize=(6, 4), dpi=80)  # Crea una nueva instancia de la clase Figure con un tamaño específico
+    eje = figura.add_subplot(111)  # Agrega un subgráfico al objeto figura
+
+    df.plot(kind='bar', ax=eje, color='green', legend=False)  # Crea un gráfico de barras utilizando el DataFrame df y el subgráfico eje
+    eje.set_xlabel('Índice')  # Establece la etiqueta del eje x del gráfico
+    eje.set_ylabel('Energía Cinética (J)')  # Establece la etiqueta del eje y del gráfico
+    eje.set_title('Energía Cinética')  # Establece el título del gráfico
+    eje.grid(True)  # Activa la cuadrícula en el gráfico
+
+    lienzo = FigureCanvasTkAgg(figura, master=frame_grafico)  # Crea un lienzo de Tkinter para mostrar la figura
+    lienzo.draw()  # Dibuja la figura en el lienzo
+    lienzo.get_tk_widget().pack()  # Empaqueta el widget del lienzo en el marco gráfico para mostrarlo en la interfaz
+
+def calcular_energia_cinetica_enter(event):
+    # Esta función se ejecuta cuando se presiona la tecla Enter en una de las entradas de texto, y llama a la función calcular_energia_cinetica.
+
+    if event.keysym == 'Return':
+        calcular_energia_cinetica()
+
+def mostrar_formula():
+    # Esta función muestra una ventana emergente con la imagen de la fórmula de la energía cinética.
+
+    ventana_formula = tk.Toplevel(window)  # Crea una nueva ventana emergente (ventana secundaria)
+    ventana_formula.title("Fórmula de Energía Cinética")  # Establece el título de la ventana
+
+    imagen = Image.open("Formula.png")  # Abre la imagen de la fórmula
+    imagen = imagen.resize((400, 300), Image.ANTIALIAS)  # Redimensiona la imagen a un tamaño específico
+    imagen_tk = ImageTk.PhotoImage(imagen)  # Crea un objeto ImageTk a partir de la imagen redimensionada
+
+    label_formula = tk.Label(ventana_formula, image=imagen_tk)  # Crea una etiqueta en la ventana emergente y la asigna a la imagen de la fórmula
+    label_formula.pack(padx=10, pady=10)  # Empaqueta la etiqueta en la ventana con un relleno específico
+
+    ventana_formula.mainloop()  # Inicia el bucle principal de la ventana emergente
+
+window = tk.Tk()  # Crea la ventana principal
+window.title("Cálculo de Energía Cinética")  # Establece el título de la ventana
+
+label_masa = tk.Label(window, text="Masa (kg):")  # Crea una etiqueta para mostrar el texto "Masa (kg):"
+label_masa.pack(padx=10, pady=5)  # Empaqueta la etiqueta en la ventana con un relleno específico
+
+entry_masa = tk.Entry(window)  # Crea una entrada de texto para ingresar el valor de la masa
+entry_masa.pack(padx=10, pady=5)  # Empaqueta la entrada de texto en la ventana con un relleno específico
+entry_masa.focus()  # Establece el foco en la entrada de texto
+
+label_velocidad = tk.Label(window, text="Velocidad (m/s):")  # Crea una etiqueta para mostrar el texto "Velocidad (m/s):"
+label_velocidad.pack(padx=10, pady=5)  # Empaqueta la etiqueta en la ventana con un relleno específico
+
+entry_velocidad = tk.Entry(window)  # Crea una entrada de texto para ingresar el valor de la velocidad
+entry_velocidad.pack(padx=10, pady=5)  # Empaqueta la entrada de texto en la ventana con un relleno específico
+
+button_calcular = tk.Button(window, text="Calcular", command=calcular_energia_cinetica)  # Crea un botón con el texto "Calcular" y vincula la función calcular_energia_cinetica a su evento de clic
+button_calcular.pack(padx=10, pady=10)  # Empaqueta el botón en la ventana con un relleno específico
+
+label_energia_cinetica = tk.Label(window, text="El valor de la energía cinética es de: ")  # Crea una etiqueta para mostrar el resultado de la energía cinética
+label_energia_cinetica.pack(padx=10, pady=5)  # Empaqueta la etiqueta en la ventana con un relleno específico
+
+frame_grafico = tk.Frame(window)  # Crea un marco para contener el gráfico
+frame_grafico.pack(padx=10, pady=10)  # Empaqueta el marco en la ventana con un relleno específico
+
+entry_masa.bind('<KeyPress>', calcular_energia_cinetica_enter)  # Vincula la tecla "Enter" en la entrada de texto de masa a la función de cálculo de energía cinética
+entry_velocidad.bind('<KeyPress>', calcular_energia_cinetica_enter)  # Vincula la tecla "Enter" en la entrada de texto de velocidad a la función de cálculo de energía cinética
+
+button_formula = tk.Button(window, text="¿No sabes cómo se llegó al resultado? Presiona aquí.", command=mostrar_formula)  # Crea un botón con el texto "¿No sabes cómo se llegó al resultado? Presiona aquí." y vincula la función mostrar_formula a su evento de clic
+button_formula.pack(padx=10, pady=10)  # Empaqueta el botón en la ventana con un relleno específico
+
+window.mainloop()  # Inicia el bucle principal de la ventana principal

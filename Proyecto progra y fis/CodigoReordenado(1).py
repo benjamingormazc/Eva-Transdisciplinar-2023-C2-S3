@@ -1,4 +1,3 @@
-# Eva-Transdisciplinar-2023-C2-S3
 import pandas as pd
 import tkinter as tk
 from matplotlib.figure import Figure
