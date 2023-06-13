@@ -53,7 +53,7 @@ window.title("Cálculo de Energía Cinética")
 window.attributes('-fullscreen', True)  # Ejecutar en pantalla completa
 window.configure(bg="#CCCCCC")  # Establece el color de fondo en gris
 
-fondo = Image.open("Fondouwu.png")
+fondo = Image.open("fondouwu.png")
 fondo = fondo.resize((window.winfo_screenwidth(), window.winfo_screenheight()))
 fondo_tk = ImageTk.PhotoImage(fondo)
 
