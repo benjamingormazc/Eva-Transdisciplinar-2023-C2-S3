@@ -1,3 +1,5 @@
+#Actualizacion-codigo-energiaCinetica/ Benjamin-Quinteros. #
+
 import tkinter as tk
 
 # Función para calcular la energía cinética
@@ -12,7 +14,7 @@ def calcular_energia_cinetica():
 def convertir_kmph_a_ms():
     kmph = float(entry_kmph.get())  # Obtiene el valor de km/h ingresado
     ms = kmph * (1000 / 3600)  # Convierte de km/h a m/s
-    label_ms.configure(text="= {} km/h = {} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_ms.configure(text="= {} km/h = {:.2f} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
 # Función para calcular la velocidad
 def calcular_velocidad():
@@ -59,11 +61,10 @@ label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC"
 label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
-# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO VELOCIDAD
-
-label_masa_velocidad = tk.Label(window, text="Obtener velocidad teniendo", bg="#CCCCCC", font=("Arial", 13, "bold"))
+# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO
+label_masa_velocidad = tk.Label(window, text="Obtener velocidad teniendo.", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_masa_velocidad.place(x=10, y=200)
-label_masa_velocidad = tk.Label(window, text="masa y energia", bg="#CCCCCC", font=("Arial", 13, "bold")) 
+label_masa_velocidad = tk.Label(window, text="masa y energia.", bg="#CCCCCC", font=("Arial", 13, "bold")) 
 label_masa_velocidad.place(x=10, y=230)
 label_masa_velocidad_texto = tk.Label(window, text="Ingrese los datos de masa:", bg="#CCCCCC")
 label_masa_velocidad_texto.place(x=10, y=264)
@@ -107,3 +108,10 @@ window.bind('<Escape>', cerrar_ventana)
 
 # Ejecutar el bucle principal de la ventana
 window.mainloop()
+
+
+# falta
+# * Crear botones de "Ver formula de energia" y "Ver formula de velocidad"
+# * Crear tres botones mas en la seccion "Problematica" para cargar las 3 problematicas.
+# * Graficar la energia cinetica. (De momento no he encontrado un grafico bueno para representarla - Benjamin quinteros)
+# * Mejorar aspecto visual. (Esto se puede dejar a lo ultimo, no es relevante)
