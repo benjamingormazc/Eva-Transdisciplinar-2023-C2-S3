@@ -1,4 +1,7 @@
 import tkinter as tk
+from PIL import Image, ImageTk
+imagen_mostrada = False
+
 
 # Función para calcular la energía cinética
 def calcular_energia_cinetica():
@@ -12,7 +15,7 @@ def calcular_energia_cinetica():
 def convertir_kmph_a_ms():
     kmph = float(entry_kmph.get())  # Obtiene el valor de km/h ingresado
     ms = kmph * (1000 / 3600)  # Convierte de km/h a m/s
-    label_ms.configure(text="= {} km/h = {} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_ms.configure(text="= {} km/h = {:.2f} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
 # Función para calcular la velocidad
 def calcular_velocidad():
@@ -25,6 +28,30 @@ def calcular_velocidad():
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
         window.destroy()
+
+def abrir_imagen():
+    global imagen_mostrada
+    
+    try:
+        # Carga la imagen desde la carpeta
+        imagen = Image.open("Formula.png")
+        imagen = imagen.resize((400, 200))
+
+        # Crea un objeto PhotoImage para mostrar la imagen en el widget Label
+        imagen_tk = ImageTk.PhotoImage(imagen)
+
+        if not imagen_mostrada:
+            # Muestra la imagen en el widget Label
+            label_imagen.configure(image=imagen_tk)
+            label_imagen.image = imagen_tk  # Guarda una referencia para evitar que la imagen se elimine por el recolector de basura
+            imagen_mostrada = True
+        else:
+            # Oculta la imagen
+            label_imagen.configure(image="")
+            label_imagen.image = None
+            imagen_mostrada = False
+    except FileNotFoundError:
+        print("Error: No se encontró la imagen 'Formula.EC'")
 
 # Creación de la ventana principal
 window = tk.Tk()
@@ -59,7 +86,7 @@ label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC"
 label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
-# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO VELOCIDAD
+# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO
 label_masa_velocidad = tk.Label(window, text="Obtener velocidad teniendo.", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_masa_velocidad.place(x=10, y=200)
 label_masa_velocidad = tk.Label(window, text="masa y energia.", bg="#CCCCCC", font=("Arial", 13, "bold")) 
@@ -100,6 +127,17 @@ button_convertir.place(x=19, y=485)
 # Etiqueta para mostrar el resultado de la conversión
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 9,"bold"))
 label_ms.place(x=79, y=486)
+
+# Botón para abrir la imagen
+button_abrir_imagen = tk.Button(window, text="Formula Ec", font="Tahoma", command=abrir_imagen)
+button_abrir_imagen.pack()
+button_abrir_imagen.place(x=79, y=600)
+
+# Widget Label para mostrar la imagen
+label_imagen = tk.Label(window, bg="#CCCCCC")
+label_imagen.pack()
+label_imagen.place(x=550, y=100)
+
 
 # Asociar la tecla Escape a la función de cierre de ventana
 window.bind('<Escape>', cerrar_ventana)
