@@ -30,7 +30,7 @@ def abrir_imagen():
     global imagen_mostrada
     
     imagen = Image.open("F.velocidad.png")
-    imagen = imagen.resize((400, 200))
+    imagen = imagen.resize((480, 260))
     imagen_tk = ImageTk.PhotoImage(imagen)
 
     if not imagen_mostrada:
@@ -133,11 +133,14 @@ label_ms.place(x=79, y=486)
 # Botón para abrir la imagen - fprmula energia cinetica
 button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Tahoma", 8), command=abrir_imagen)
 button_abrir_imagen.pack()
-button_abrir_imagen.place(x=79, y=600)
+button_abrir_imagen.place(x=79, y=600, height=50)
 # Widget Label para mostrar la imagen - formula energia cinetica
 label_imagen = tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
-label_imagen.place(x=550, y=100)
+label_imagen.place(x=412, y=435)
+
+#Ventana llamada "Problematicas a simular"
+label = tk.Entry(window, text= "Problematicas:", font="Calibri")
 
 
 # Asociar la tecla Escape a la función de cierre de ventana
