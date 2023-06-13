@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from PIL import Image, ImageTk
 # Función para calcular la energía cinética
 def calcular_energia_cinetica():
     masa = float(entry_masa.get())  # Obtiene el valor de masa ingresado
@@ -25,6 +25,20 @@ def calcular_velocidad():
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
         window.destroy()
+
+def abrir_ventana_imagen():
+    ventana_imagen = tk.Toplevel(window)  # Crea una nueva ventana
+    ventana_imagen.title("Imagen")
+    
+    # Carga la imagen
+    imagen = Image.open("formula.png")
+    foto = ImageTk.PhotoImage(imagen)
+    
+    # Crea un widget Label para mostrar la imagen
+    label_imagen = tk.Label(ventana_imagen, image=foto)
+    label_imagen.pack()
+    
+    ventana_imagen.mainloop()
 
 # Creación de la ventana principal
 window = tk.Tk()
@@ -100,6 +114,8 @@ button_convertir.place(x=19, y=485)
 # Etiqueta para mostrar el resultado de la conversión
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 9,"bold"))
 label_ms.place(x=79, y=486)
+button_imagen = tk.Button(window, text="Abrir imagen", command=abrir_ventana_imagen)
+button_imagen.place(x=19, y=520)
 
 # Asociar la tecla Escape a la función de cierre de ventana
 window.bind('<Escape>', cerrar_ventana)
