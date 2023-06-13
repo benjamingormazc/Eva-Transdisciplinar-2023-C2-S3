@@ -73,7 +73,7 @@ label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC"
 label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
-# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO
+# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO VELOCIDAD
 label_masa_velocidad = tk.Label(window, text="Obtener velocidad teniendo.", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_masa_velocidad.place(x=10, y=200)
 label_masa_velocidad = tk.Label(window, text="masa y energia.", bg="#CCCCCC", font=("Arial", 13, "bold")) 
