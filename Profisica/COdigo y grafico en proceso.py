@@ -131,6 +131,8 @@ label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial
 label_ms.place(x=79, y=486)
 
 # Botón para abrir la imagen - fprmula energia cinetica
+label = tk.Label(window, text= "¿Necesitas ayuda?", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label.place(x=60, y=530)
 button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Tahoma", 8), command=abrir_imagen)
 button_abrir_imagen.pack()
 button_abrir_imagen.place(x=79, y=600, height=50)
@@ -139,8 +141,10 @@ label_imagen = tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
 label_imagen.place(x=412, y=435)
 
-#Ventana llamada "Problematicas a simular"
-label = tk.Entry(window, text= "Problematicas:", font="Calibri")
+#Ventana llamada "Problematicas a simular" para la problematica @
+label = tk.Label(window, text= "Problematicas", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label.place(x=1100, y=460)
+                 
 
 
 # Asociar la tecla Escape a la función de cierre de ventana
