@@ -1,6 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-imagen_mostrada = False
+
+imagen_mostrada = True #Se añadio esta condicion, 
 
 
 # Función para calcular la energía cinética
@@ -38,34 +39,26 @@ def mostrar_formula():
 
     ventana_formula.mainloop()
 
+def abrir_imagen():
+    global imagen_mostrada
+    
+    imagen = Image.open("Formula.png")
+    imagen = imagen.resize((400, 200))
+    imagen_tk = ImageTk.PhotoImage(imagen)
+
+    if not imagen_mostrada:
+        label_imagen.configure(image=imagen_tk)
+        label_imagen.image = imagen_tk
+        imagen_mostrada = True
+    else:
+        label_imagen.configure(image="")
+        label_imagen.image = None
+        imagen_mostrada = False
+
 # Función para cerrar la ventana cuando se presiona la tecla Escape
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
         window.destroy()
-
-def abrir_imagen():
-    global imagen_mostrada
-    
-    try:
-        # Carga la imagen desde la carpeta
-        imagen = Image.open("Formula.png")
-        imagen = imagen.resize((400, 200))
-
-        # Crea un objeto PhotoImage para mostrar la imagen en el widget Label
-        imagen_tk = ImageTk.PhotoImage(imagen)
-
-        if not imagen_mostrada:
-            # Muestra la imagen en el widget Label
-            label_imagen.configure(image=imagen_tk)
-            label_imagen.image = imagen_tk  # Guarda una referencia para evitar que la imagen se elimine por el recolector de basura
-            imagen_mostrada = True
-        else:
-            # Oculta la imagen
-            label_imagen.configure(image="")
-            label_imagen.image = None
-            imagen_mostrada = False
-    except FileNotFoundError:
-        print("Error: No se encontró la imagen 'Formula.EC'")
 
 # Creación de la ventana principal
 window = tk.Tk()
@@ -146,7 +139,7 @@ label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial
 label_ms.place(x=79, y=486)
 
 # Botón para abrir la imagen
-button_abrir_imagen = tk.Button(window, text="Formula Ec", font="Tahoma", command=abrir_imagen)
+button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Tahoma", 8), command=abrir_imagen)
 button_abrir_imagen.pack()
 button_abrir_imagen.place(x=79, y=600)
 
