@@ -21,6 +21,20 @@ def calcular_velocidad():
     velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad
     label_velocidad_resultado.configure(text="= La velocidad es de {:.2f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
+#función para mostrar la foto(formula)
+def mostrar_formula():
+    ventana_formula = tk.Toplevel(window)
+    ventana_formula.title("Fórmula de Energía Cinética")
+
+    imagen = Image.open("Formula.png")
+    imagen = imagen.resize((400, 300), Image.ANTIALIAS)
+    imagen_tk = ImageTk.PhotoImage(imagen)
+
+    label_formula = tk.Label(ventana_formula, image=imagen_tk)
+    label_formula.pack(padx=10, pady=10)
+
+    ventana_formula.mainloop()
+
 # Función para cerrar la ventana cuando se presiona la tecla Escape
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
@@ -59,7 +73,7 @@ label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC"
 label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
-# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO VELOCIDAD
+# Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO
 label_masa_velocidad = tk.Label(window, text="Obtener velocidad teniendo.", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_masa_velocidad.place(x=10, y=200)
 label_masa_velocidad = tk.Label(window, text="masa y energia.", bg="#CCCCCC", font=("Arial", 13, "bold")) 
@@ -97,6 +111,9 @@ label_kmph.place(x= 159, y= 450)
 # Botón para convertir de km/h a m/s
 button_convertir = tk.Button(window, text="Convertir", command=convertir_kmph_a_ms)
 button_convertir.place(x=19, y=485)
+# botón para mostrar formula
+button_formula = tk.Button(window, text="Pulsa para mostrar la formula de energia Cinetica.", command=mostrar_formula)
+button_formula.pack(padx=10, pady=10)
 # Etiqueta para mostrar el resultado de la conversión
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 9,"bold"))
 label_ms.place(x=79, y=486)

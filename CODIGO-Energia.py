@@ -1,6 +1,9 @@
 #Actualizacion-codigo-energiaCinetica/ Benjamin-Quinteros. #
 
 import tkinter as tk
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from PIL import Image, ImageTk
 
 # Función para calcular la energía cinética
 def calcular_energia_cinetica():
@@ -23,6 +26,19 @@ def calcular_velocidad():
     velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad
     label_velocidad_resultado.configure(text="= La velocidad es de {:.2f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
+#función para mostrar la problematica
+def mostrar_formula():
+    ventana_formula = tk.Toplevel(window)
+    ventana_formula.title("Fórmula de Energía Cinética")
+
+    imagen = Image.open("Formula.png")
+    imagen = imagen.resize((400, 300), Image.ANTIALIAS)
+    imagen_tk = ImageTk.PhotoImage(imagen)
+
+    label_formula = tk.Label(ventana_formula, image=imagen_tk)
+    label_formula.pack(padx=10, pady=10)
+
+    ventana_formula.mainloop()
 # Función para cerrar la ventana cuando se presiona la tecla Escape
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
@@ -99,6 +115,9 @@ label_kmph.place(x= 159, y= 450)
 # Botón para convertir de km/h a m/s
 button_convertir = tk.Button(window, text="Convertir", command=convertir_kmph_a_ms)
 button_convertir.place(x=19, y=485)
+# botón para mostrar formula
+button_formula = tk.Button(window, text="¿No sabes cómo se llegó al resultado? Presiona aquí.", command=mostrar_formula)
+button_formula.pack(padx=10, pady=10)
 # Etiqueta para mostrar el resultado de la conversión
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 9,"bold"))
 label_ms.place(x=79, y=486)
@@ -108,7 +127,6 @@ window.bind('<Escape>', cerrar_ventana)
 
 # Ejecutar el bucle principal de la ventana
 window.mainloop()
-
 
 # falta
 # * Crear botones de "Ver formula de energia" y "Ver formula de velocidad"
