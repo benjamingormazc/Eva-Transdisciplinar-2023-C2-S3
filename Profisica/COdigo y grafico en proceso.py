@@ -1,7 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 
-imagen_mostrada = True #Se añadio esta condicion, 
+imagen_mostrada = False
 
 
 # Función para calcular la energía cinética
@@ -25,24 +25,11 @@ def calcular_velocidad():
     velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad
     label_velocidad_resultado.configure(text="= La velocidad es de {:.2f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
-#función para mostrar la foto(formula)
-def mostrar_formula():
-    ventana_formula = tk.Toplevel(window)
-    ventana_formula.title("Fórmula de Energía Cinética")
-
-    imagen = Image.open("Formula.png")
-    imagen = imagen.resize((400, 300), Image.ANTIALIAS)
-    imagen_tk = ImageTk.PhotoImage(imagen)
-
-    label_formula = tk.Label(ventana_formula, image=imagen_tk)
-    label_formula.pack(padx=10, pady=10)
-
-    ventana_formula.mainloop()
 
 def abrir_imagen():
     global imagen_mostrada
     
-    imagen = Image.open("Formula.png")
+    imagen = Image.open("F.velocidad.png")
     imagen = imagen.resize((400, 200))
     imagen_tk = ImageTk.PhotoImage(imagen)
 
@@ -63,33 +50,33 @@ def cerrar_ventana(event):
 # Creación de la ventana principal
 window = tk.Tk()
 window.title("Cálculo de Energía Cinética")
-window.geometry("1500x900")
+window.attributes('-fullscreen', True)  # Ejecutar en pantalla completa
 window.configure(bg="#CCCCCC")  # Establece el color de fondo en gris
 
 # Etiqueta y campo de entrada para la masa - ENERGIA CINETICA -----------------------------------------------------------------------------------------------------------@
 
 label_masa = tk.Label(window, text="", fg="dark blue", bg="#CCCCCC")
-label_masa = tk.Label(window, text="Calcular energía cinética.", bg="#CCCCCC", font=("Arial", 13, "bold"))
+label_masa = tk.Label(window, text="Calcular energía cinética.", bg="#CCCCCC", font=("Arial", 12, "bold"))
 label_masa.place(x= 10, y=16 )
 label_masa = tk.Label(window, text="", fg="dark blue", bg="#CCCCCC")
 label_masa = tk.Label(window, text="Ingrese los datos de masa.", bg="#CCCCCC")
 label_masa.place(x= 10, y= 50)
-label_masa = tk.Label(window, text="Kg", bg="#CCCCCC", font=("Arial", 9,"bold"))
+label_masa = tk.Label(window, text="Kg", bg="#CCCCCC", font=("Arial", 8,"bold"))
 label_masa.place(x= 110, y= 75)
-entry_masa = tk.Entry(window, text="",fg="black", font=("Arial", 9,"bold"))
+entry_masa = tk.Entry(window, text="",fg="black", font=("Arial", 8,"bold"))
 entry_masa.place(x = 20, y = 75, width=75)
 # Etiqueta y campo de entrada para la velocidad - ENERGIA CINETICA
 label_velocidad = tk.Label(window, text="Ingrese los datos de velocidad.", bg="#CCCCCC")
 label_velocidad.place(x=10, y=100)
-label_velocidad = tk.Label(window, text="m/s", bg="#CCCCCC", font=("Arial", 9,"bold"))
+label_velocidad = tk.Label(window, text="m/s", bg="#CCCCCC", font=("Arial", 8,"bold"))
 label_velocidad.place(x= 110, y= 120)
-entry_velocidad = tk.Entry(window, text="",fg="black", font=("Arial", 9,"bold"))
+entry_velocidad = tk.Entry(window, text="",fg="black", font=("Arial", 8,"bold"))
 entry_velocidad.place(x=20, y=120, width=75)
 # Botón para calcular la energía cinética - ENERGIA CINETICA
 button_calcular = tk.Button(window, text="Calcular", command=calcular_energia_cinetica)
 button_calcular.place(x=19, y=155)
 # Etiqueta para mostrar el valor de la energía cinética calculada - ENERGIA CINETICA 
-label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 9,"bold"))
+label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 8,"bold"))
 label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
@@ -131,9 +118,6 @@ label_kmph.place(x= 159, y= 450)
 # Botón para convertir de km/h a m/s
 button_convertir = tk.Button(window, text="Convertir", command=convertir_kmph_a_ms)
 button_convertir.place(x=19, y=485)
-# botón para mostrar formula
-button_formula = tk.Button(window, text="Pulsa para mostrar la formula de energia Cinetica.", command=mostrar_formula)
-button_formula.pack(padx=10, pady=10)
 # Etiqueta para mostrar el resultado de la conversión
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 9,"bold"))
 label_ms.place(x=79, y=486)
