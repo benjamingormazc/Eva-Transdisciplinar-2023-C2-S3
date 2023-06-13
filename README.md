@@ -19,3 +19,4 @@ En este caso, tenemos los datos de masa (80kg) y velocidad alcanzada (12 m/s).
 La nueva formula seria (0.5 * 80 * 12 m/s al cuadrado) Tras realizar la operacion, podemos afirmar que al alcanzar la velocidad de 12 m/s, mi energia cinetica 
 es de 5760 Joules.
 
+Breve historia de la energia cinetica: (Añadir datos, por favor)
