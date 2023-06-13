@@ -12,10 +12,9 @@ la energía potencial que tenía en el punto más alto de su trayectoria se va c
 A medida que la pelota desciende, su energía potencial disminuye y su energía cinética aumenta. En el punto más bajo de su trayectoria,
 la energía potencial es mínima o cero, y la energía cinética es máxima.
 
+
 De manera similar, cuando un automóvil se desplaza, la energía química almacenada en el combustible se convierte en energía cinética a medida que el vehículo se pone en movimiento.
 El motor quema el combustible y la energía liberada impulsa al automóvil, aumentando su energía cinética.
-
-
 
 ## La comprensión de la energía cinética
 
@@ -28,3 +27,6 @@ En 1829, Coriolis introdujo el concepto de "trabajo vivo" (le travail vif en fra
 
 Posteriormente, en la segunda mitad del siglo XIX, el físico británico William Thomson, también conocido como Lord Kelvin, 
 desarrolló una formulación matemática más precisa de la energía cinética.
+
+La formula de la energia cinetica es 1/2 * masa del objeto * velocidad al cuadrado. 
+Su valor se mide en Joules y ademas, debe ser mayor o igual a 0. En la velocidad eso da igual, ya que al estar elevada al cuadrado siempre va a dar positivo. (Positivo * positivo) = Positivo. (Negativo * Negativo) = Positivo.
