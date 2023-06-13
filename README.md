@@ -1,4 +1,7 @@
 # Eva-Transdisciplinar-2023-C2-S3
+
+proyecto programación y física 
+=======
 proyecto programación y física. 
 
 En este proyecto vamos a simular 3 eventos fisicos:
@@ -20,3 +23,4 @@ La nueva formula seria (0.5 * 80 * 12 m/s al cuadrado) Tras realizar la operacio
 es de 5760 Joules.
 
 Breve historia de la energia cinetica: (Añadir datos, por favor)
+
