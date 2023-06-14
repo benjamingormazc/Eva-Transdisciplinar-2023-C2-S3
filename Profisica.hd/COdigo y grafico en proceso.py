@@ -176,9 +176,8 @@ button_abrir_imagen1.place(x=79, y=600, height=50)
 # Widget Label para mostrar la imagen - formula energia cinetica
 label_imagen= tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
-label_imagen.place(x=412, y=435) # #
+label_imagen.place(x=412, y=435) # 
 
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 # Botón para abrir la imagen - formula velocidad de energia cinetica.
 
 button_abrir_imagen2 = tk.Button(window, text="Ver formula de velocidad de energia.", font=("Comic Sans MS", 8, "bold"), command=abrir_imagen2)
@@ -190,13 +189,14 @@ label_imagen.place(x=412, y=435)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
                  
-# # Botón para abrir la imagen - problematica 1
+# # Botón para abrir la imagen - problematicas 
 button_problematica1 = tk.Button(window, text="  Ver problema #1  ", font=("Comic Sans MS", 9, "bold"), command=problematica1)
 button_problematica1.place(x=1060, y=530, height=50, width=250)
 # Widget Label para mostrar la imagen - problematica 1
 label_imagen3 = tk.Label(window, bg="#CCCCCC")
 label_imagen3.pack()
-label_imagen3.place(x=411, y=18) #
+label_imagen3.place(x=411, y=18) 
+
 
 
 
