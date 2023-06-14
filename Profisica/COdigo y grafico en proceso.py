@@ -110,9 +110,9 @@ label_velocidad.place(x= 110, y= 120)
 entry_velocidad = tk.Entry(window, text="",fg="black", font=("Arial", 8,"bold"))
 entry_velocidad.place(x=20, y=120, width=75)
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Botón para calcular la energía cinética - ENERGIA CINETICA
+# Botón para calcular la energía cinética - ENERGIA CINETICA-------------------------------------------------------------------------------------------------------------
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-button_calcular = tk.Button(window, text="Calcular", command=calcular_energia_cinetica)
+button_calcular = tk.Button(window, text="Calcular", command=calcular_energia_cinetica and plot_graph)
 button_calcular.place(x=19, y=155)
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Etiqueta para mostrar el valor de la energía cinética calculada - ENERGIA CINETICA 
@@ -183,11 +183,6 @@ label.place(x=60, y=530)
 button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Tahoma", 8), command=abrir_imagen)
 button_abrir_imagen.pack()
 button_abrir_imagen.place(x=79, y=600, height=50)
-#+++++++++++++++++++++++++++++++++++++
-# Boton para mostrar el grafico lineal
-#+++++++++++++++++++++++++++++++++++++
-button_grafico = tk.Button(window, text="Mostrar Gráfico", command=plot_graph)
-button_grafico.place(x=79, y=700)
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Widget Label para mostrar la imagen - formula energia cinetica
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
