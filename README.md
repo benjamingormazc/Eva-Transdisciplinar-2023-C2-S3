@@ -19,8 +19,6 @@ En este caso, tenemos los datos de masa (80kg) y velocidad alcanzada (12 m/s).
 La nueva formula seria (0.5 * 80 * 12 m/s al cuadrado) Tras realizar la operacion, podemos afirmar que al alcanzar la velocidad de 12 m/s, mi energia cinetica 
 es de 5760 Joules.
 
-Breve historia de la energia cinetica
-
 
 # La energía cinética
 
@@ -52,5 +50,5 @@ En 1829, Coriolis introdujo el concepto de "trabajo vivo" (le travail vif en fra
 Posteriormente, en la segunda mitad del siglo XIX, el físico británico William Thomson, también conocido como Lord Kelvin, 
 desarrolló una formulación matemática más precisa de la energía cinética.
 
-La formula de la energia cinetica es 1/2 * masa del objeto * velocidad al cuadrado. 
-Su valor se mide en Joules y ademas, debe ser mayor o igual a 0. En su velocidad eso da igual, ya que al estar elevada al cuadrado siempre va a dar positivo. (Positivo * positivo) = Positivo. (Negativo * Negativo) = Positivo. 
+(1/2 * m * v al cuadrado)
+
