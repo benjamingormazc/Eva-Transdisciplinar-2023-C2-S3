@@ -71,12 +71,12 @@ def problematica1():
     imagen_tk = ImageTk.PhotoImage(imagen)
 
     if not Imagen_mostrada2:
-        label_imagen3.configure(image=imagen_tk)
-        label_imagen3.image = imagen_tk
+        label_imagen2.configure(image=imagen_tk)
+        label_imagen2.image = imagen_tk
         Imagen_mostrada2 = True
     else:
-        label_imagen3.configure(image="")
-        label_imagen3.image = None
+        label_imagen2.configure(image="")
+        label_imagen2.image = None
         Imagen_mostrada2 = False
 
 def problematica2():
@@ -87,12 +87,12 @@ def problematica2():
     imagen_tk = ImageTk.PhotoImage(imagen)
 
     if not Imagen_mostrada2:
-        label_imagen3.configure(image=imagen_tk)
-        label_imagen3.image = imagen_tk
+        label_imagen2.configure(image=imagen_tk)
+        label_imagen2.image = imagen_tk
         Imagen_mostrada2 = True
     else:
-        label_imagen3.configure(image="")
-        label_imagen3.image = None
+        label_imagen2.configure(image="")
+        label_imagen2.image = None
         Imagen_mostrada2 = False
   
 # Función para cerrar la ventana cuando se presiona la tecla Escape
@@ -205,26 +205,32 @@ label_imagen.place(x=412, y=435)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
                  
-# # Botón para abrir la imagen - problematicas 
+# # Botón para abrir la imagen - problematicas 1
 button_problematica1 = tk.Button(window, text="  Ver problema #1  ", font=("Comic Sans MS", 9, "bold"), command=problematica1)
 button_problematica1.place(x=1060, y=530, height=50, width=250)
 # Widget Label para mostrar la imagen - problematica 1
-label_imagen3 = tk.Label(window, bg="#CCCCCC")
-label_imagen3.pack()
-label_imagen3.place(x=411, y=18)  # Medidas en donde estara ubicada la imagen "Problematica 1, 2, 3"
-
+label_imagen2 = tk.Label(window, bg="#CCCCCC")
+label_imagen2.pack()
+label_imagen2.place(x=411, y=18)  # Medidas en donde estara ubicada las imagenes "Problematica 1, 2, 3" ya que miden lo mismo todas.
+# # Botón para abrir la imagen - problematicas 2
+button_problematica1 = tk.Button(window, text="  Ver problema #2  ", font=("Comic Sans MS", 9, "bold"), command=problematica2)
+button_problematica1.place(x=1060, y=600, height=50, width=250)
+# Widget Label para mostrar la imagen - problematica 2
+label_imagen2 = tk.Label(window, bg="#CCCCCC")
+label_imagen2.pack()
+label_imagen2.place(x=411, y=18) 
+# # Botón para abrir la imagen - problematicas 3 ---- EN PROCESO
 
 
 
 
 
 #Ventana llamada "Problematicas a simular" para la problematica @
-label = tk.Label(window, text= "Problematicas", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
-label.place(x=1100, y=460)
+label = tk.Label(window, text= "Problematicas a simular", fg= "#E02121",bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label.place(x=1050, y=460)
 #Ventana llamada "¿necesitas ayuda?" para 
-label = tk.Label(window, text= "¿Necesitas ayuda?", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label = tk.Label(window, text= "¿Necesitas ayuda?", fg="#E02121", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
 label.place(x=60, y=530)
-
 
 # Asociar la tecla Escape a la función de cierre de ventana
 window.bind('<Escape>', cerrar_ventana)
