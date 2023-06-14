@@ -19,4 +19,38 @@ En este caso, tenemos los datos de masa (80kg) y velocidad alcanzada (12 m/s).
 La nueva formula seria (0.5 * 80 * 12 m/s al cuadrado) Tras realizar la operacion, podemos afirmar que al alcanzar la velocidad de 12 m/s, mi energia cinetica 
 es de 5760 Joules.
 
-Breve historia de la energia cinetica: (Añadir datos, por favor)
+Breve historia de la energia cinetica
+
+
+# La energía cinética
+
+La energía cinética es la energía asociada al movimiento de un objeto.
+El origen de la energía cinética se encuentra en la conversión de otras formas de energía en energía de movimiento.
+
+Según la ley de conservación de la energía, la energía no se crea ni se destruye, solo se transforma de una forma a otra.
+En el caso de la energía cinética, se produce a partir de la transformación de otras formas de energía, como la energía potencial, la energía química, 
+la energía eléctrica, etc.
+
+Por ejemplo, cuando lanzas una pelota hacia arriba, 
+la energía potencial que tenía en el punto más alto de su trayectoria se va convirtiendo en energía cinética a medida que la pelota cae.
+A medida que la pelota desciende, su energía potencial disminuye y su energía cinética aumenta. En el punto más bajo de su trayectoria,
+la energía potencial es mínima o cero, y la energía cinética es máxima.
+
+
+De manera similar, cuando un automóvil se desplaza, la energía química almacenada en el combustible se convierte en energía cinética a medida que el vehículo se pone en movimiento.
+El motor quema el combustible y la energía liberada impulsa al automóvil, aumentando su energía cinética.
+
+# La comprensión de la energía cinética
+
+La comprensión de la relación entre el movimiento y la energía comenzó a surgir en el siglo XVII con los trabajos de científicos como Galileo Galilei y Johannes Kepler. 
+Sin embargo, el término "energía cinética" en sí no se utilizó hasta mucho después.
+
+En el siglo XIX, durante la época de la Revolución Industrial, la comprensión de la energía cinética se desarrolló aún más.
+Uno de los científicos que contribuyó significativamente fue Gustave-Gaspard Coriolis, un ingeniero y matemático francés.
+En 1829, Coriolis introdujo el concepto de "trabajo vivo" (le travail vif en francés), que estaba relacionado con la energía cinética.
+
+Posteriormente, en la segunda mitad del siglo XIX, el físico británico William Thomson, también conocido como Lord Kelvin, 
+desarrolló una formulación matemática más precisa de la energía cinética.
+
+La formula de la energia cinetica es 1/2 * masa del objeto * velocidad al cuadrado. 
+Su valor se mide en Joules y ademas, debe ser mayor o igual a 0. En su velocidad eso da igual, ya que al estar elevada al cuadrado siempre va a dar positivo. (Positivo * positivo) = Positivo. (Negativo * Negativo) = Positivo. 
