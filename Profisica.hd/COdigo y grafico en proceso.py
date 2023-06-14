@@ -29,7 +29,7 @@ def convertir_kmph_a_ms():
 
 def abrir_imagen(): #FORMULA ENERGIA CINETICA
     global imagen_mostrada
-    global Imagen_mostrada2
+   
     
     imagen = Image.open("Formula.png")
     imagen = imagen.resize((480, 260))
@@ -47,7 +47,6 @@ def abrir_imagen(): #FORMULA ENERGIA CINETICA
 
 def abrir_imagen2(): #FORMULA PARA CALCULAR LA VELOCIDAD DE LA ENERGIA CINETICA.
     global imagen_mostrada
-    global Imagen_mostrada2
 
     imagen = Image.open("F.velocidad.png")
     imagen = imagen.resize((480, 260))
@@ -72,31 +71,14 @@ def problematica1():
     imagen_tk = ImageTk.PhotoImage(imagen)
 
     if not Imagen_mostrada2:
-        label_imagen.configure(image=imagen_tk)
-        label_imagen.image = imagen_tk
+        label_imagen3.configure(image=imagen_tk)
+        label_imagen3.image = imagen_tk
         Imagen_mostrada2 = True
     else:
-        label_imagen.configure(image="")
-        label_imagen.image = None
+        label_imagen3.configure(image="")
+        label_imagen3.image = None
         Imagen_mostrada2 = False
-
-def problematica2():
-    global imagen_mostrada
-    
-    imagen = Image.open("Problematica2.png")
-    imagen = imagen.resize((480, 260))
-    imagen_tk = ImageTk.PhotoImage(imagen)
-
-    if not imagen_mostrada:
-        label_imagen.configure(image=imagen_tk)
-        label_imagen.image = imagen_tk
-        imagen_mostrada = True
-    else:
-        label_imagen.configure(image="")
-        label_imagen.image = None
-        imagen_mostrada = False
-        
-        
+  
 # Función para cerrar la ventana cuando se presiona la tecla Escape
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
@@ -188,13 +170,13 @@ label_ms.place(x=79, y=486)
 # Botón para abrir la imagen - formula energia cinetica
 
 
-button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Comic Sans MS", 8, "bold"), command=abrir_imagen)
-button_abrir_imagen.place(x=79, y=600, height=50)
+button_abrir_imagen1= tk.Button(window, text="Ver formula de energia cinetica.", font=("Comic Sans MS", 8, "bold"), command=abrir_imagen)
+button_abrir_imagen1.place(x=79, y=600, height=50)
 
 # Widget Label para mostrar la imagen - formula energia cinetica
-label_imagen = tk.Label(window, bg="#CCCCCC")
+label_imagen= tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
-label_imagen.place(x=412, y=435)
+label_imagen.place(x=412, y=435) # #
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 # Botón para abrir la imagen - formula velocidad de energia cinetica.
@@ -202,7 +184,7 @@ label_imagen.place(x=412, y=435)
 button_abrir_imagen2 = tk.Button(window, text="Ver formula de velocidad de energia.", font=("Comic Sans MS", 8, "bold"), command=abrir_imagen2)
 button_abrir_imagen2.place(x=79, y=680, height=50)
 # Widget Label para mostrar la imagen - formula velocidad de energia
-label_imagen = tk.Label(window, bg="#CCCCCC")
+label_imagen= tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
 label_imagen.place(x=412, y=435)
 
@@ -212,9 +194,9 @@ label_imagen.place(x=412, y=435)
 button_problematica1 = tk.Button(window, text="  Ver problema #1  ", font=("Comic Sans MS", 9, "bold"), command=problematica1)
 button_problematica1.place(x=1060, y=530, height=50, width=250)
 # Widget Label para mostrar la imagen - problematica 1
-label_imagen = tk.Label(window, bg="#CCCCCC")
-label_imagen.pack()
-label_imagen.place(x=411, y=18) #
+label_imagen3 = tk.Label(window, bg="#CCCCCC")
+label_imagen3.pack()
+label_imagen3.place(x=411, y=18) #
 
 
 
