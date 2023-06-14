@@ -1,5 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+import matplotlib.pyplot as plt
+import numpy as np
 #++++++++++++++++++++++
 # Deficion de variables
 #++++++++++++++++++++++
@@ -48,6 +50,21 @@ def abrir_imagen():
         label_imagen.configure(image="")
         label_imagen.image = None
         imagen_mostrada = False
+#++++++++++++++++++++++++++++++++
+# Función para mostrar el grafico
+#++++++++++++++++++++++++++++++++
+def plot_graph():
+    masa_vals = np.linspace(0, 10, 100)  # Valores de masa para el gráfico
+    velocidad_vals = 10 * np.sqrt(2 * 1.0 * masa_vals)  # Fórmula de energía cinética con masa constante
+
+    # Crear el gráfico lineal
+    plt.plot(velocidad_vals, masa_vals)
+    plt.xlabel('Velocidad (m/s)')
+    plt.ylabel('Masa (Kg)')
+    plt.title('Gráfico de Energía Cinética')
+
+    # Mostrar el gráfico
+    plt.show()
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Función para cerrar la ventana cuando se presiona la tecla Escape
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -166,6 +183,11 @@ label.place(x=60, y=530)
 button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Tahoma", 8), command=abrir_imagen)
 button_abrir_imagen.pack()
 button_abrir_imagen.place(x=79, y=600, height=50)
+#+++++++++++++++++++++++++++++++++++++
+# Boton para mostrar el grafico lineal
+#+++++++++++++++++++++++++++++++++++++
+button_grafico = tk.Button(window, text="Mostrar Gráfico", command=plot_graph)
+button_grafico.place(x=79, y=700)
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Widget Label para mostrar la imagen - formula energia cinetica
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -177,9 +199,6 @@ label_imagen.place(x=412, y=435) #resolución para FHD= x490, y510
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 label = tk.Label(window, text= "Problematicas", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
 label.place(x=1100, y=460)
-
-                 
-
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Asociar la tecla Escape a la función de cierre de ventana
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
