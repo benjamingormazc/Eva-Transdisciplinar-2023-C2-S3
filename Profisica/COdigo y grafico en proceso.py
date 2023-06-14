@@ -139,7 +139,7 @@ button_abrir_imagen.place(x=79, y=600, height=50)
 # Widget Label para mostrar la imagen - formula energia cinetica
 label_imagen = tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
-label_imagen.place(x=412, y=435) #Pc.Dc= x490, y510
+label_imagen.place(x=412, y=435) #resolución para FHD= x490, y510
 
 #Ventana llamada "Problematicas a simular" para la problematica @
 label = tk.Label(window, text= "Problematicas", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
