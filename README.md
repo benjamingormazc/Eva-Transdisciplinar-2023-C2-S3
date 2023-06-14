@@ -51,3 +51,5 @@ desarrolló una formulación matemática más precisa de la energía cinética.
 (1/2 * m * v al cuadrado)
 
 # Guia de instalacion
+
+------------------------------------------------------ en proceso ----------------------------------------------------------
