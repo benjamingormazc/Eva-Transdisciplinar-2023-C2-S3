@@ -2,7 +2,7 @@ import tkinter as tk
 from PIL import Image, ImageTk
 
 imagen_mostrada = False
-
+Imagen_mostrada2 = False
 
 # Función para calcular la energía cinética
 def calcular_energia_cinetica():
@@ -25,9 +25,11 @@ def convertir_kmph_a_ms():
     ms = kmph * (1000 / 3600)  # Convierte de km/h a m/s
     label_ms.configure(text="= {} km/h equivalen a {:.2f} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
+# FUNCIONES PARA BOTONES 
 
-def abrir_imagen():
+def abrir_imagen(): #FORMULA ENERGIA CINETICA
     global imagen_mostrada
+    global Imagen_mostrada2
     
     imagen = Image.open("Formula.png")
     imagen = imagen.resize((480, 260))
@@ -43,9 +45,10 @@ def abrir_imagen():
         imagen_mostrada = False
 
 
-def problematica1():
+def abrir_imagen2(): #FORMULA PARA CALCULAR LA VELOCIDAD DE LA ENERGIA CINETICA.
     global imagen_mostrada
-    
+    global Imagen_mostrada2
+
     imagen = Image.open("F.velocidad.png")
     imagen = imagen.resize((480, 260))
     imagen_tk = ImageTk.PhotoImage(imagen)
@@ -59,10 +62,28 @@ def problematica1():
         label_imagen.image = None
         imagen_mostrada = False
 
+
+
+def problematica1():
+    global Imagen_mostrada2
+    
+    imagen = Image.open("Problematica1.png")
+    imagen = imagen.resize((480, 365))
+    imagen_tk = ImageTk.PhotoImage(imagen)
+
+    if not Imagen_mostrada2:
+        label_imagen.configure(image=imagen_tk)
+        label_imagen.image = imagen_tk
+        Imagen_mostrada2 = True
+    else:
+        label_imagen.configure(image="")
+        label_imagen.image = None
+        Imagen_mostrada2 = False
+
 def problematica2():
     global imagen_mostrada
     
-    imagen = Image.open("F.velocidad.png")
+    imagen = Image.open("Problematica2.png")
     imagen = imagen.resize((480, 260))
     imagen_tk = ImageTk.PhotoImage(imagen)
 
@@ -163,24 +184,48 @@ button_convertir.place(x=19, y=485)
 # Etiqueta para mostrar el resultado de la conversión
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 8,"bold"))
 label_ms.place(x=79, y=486)
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
+# Botón para abrir la imagen - formula energia cinetica
 
-# Botón para abrir la imagen - fprmula energia cinetica
-label = tk.Label(window, text= "¿Necesitas ayuda?", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
-label.place(x=60, y=530)
+
 button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Comic Sans MS", 8, "bold"), command=abrir_imagen)
-button_abrir_imagen.pack()
-
-
 button_abrir_imagen.place(x=79, y=600, height=50)
+
 # Widget Label para mostrar la imagen - formula energia cinetica
 label_imagen = tk.Label(window, bg="#CCCCCC")
 label_imagen.pack()
 label_imagen.place(x=412, y=435)
 
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
+# Botón para abrir la imagen - formula velocidad de energia cinetica.
+
+button_abrir_imagen2 = tk.Button(window, text="Ver formula de velocidad de energia.", font=("Comic Sans MS", 8, "bold"), command=abrir_imagen2)
+button_abrir_imagen2.place(x=79, y=680, height=50)
+# Widget Label para mostrar la imagen - formula velocidad de energia
+label_imagen = tk.Label(window, bg="#CCCCCC")
+label_imagen.pack()
+label_imagen.place(x=412, y=435)
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
+                 
+# # Botón para abrir la imagen - problematica 1
+button_problematica1 = tk.Button(window, text="  Ver problema #1  ", font=("Comic Sans MS", 9, "bold"), command=problematica1)
+button_problematica1.place(x=1060, y=530, height=50, width=250)
+# Widget Label para mostrar la imagen - problematica 1
+label_imagen = tk.Label(window, bg="#CCCCCC")
+label_imagen.pack()
+label_imagen.place(x=411, y=18) #
+
+
+
+
+
 #Ventana llamada "Problematicas a simular" para la problematica @
 label = tk.Label(window, text= "Problematicas", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
 label.place(x=1100, y=460)
-                 
+#Ventana llamada "¿necesitas ayuda?" para 
+label = tk.Label(window, text= "¿Necesitas ayuda?", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label.place(x=60, y=530)
 
 
 # Asociar la tecla Escape a la función de cierre de ventana
