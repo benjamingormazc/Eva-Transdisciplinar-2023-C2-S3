@@ -17,7 +17,7 @@ def calcular_velocidad():
     masa = float(entry_masa_velocidad.get())  # Obtiene el valor de masa ingresado
     energia = float(entry_energia.get())  # Obtiene el valor de energía ingresado
     velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad
-    label_velocidad_resultado.configure(text="= La velocidad es de {:.2f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_velocidad_resultado.configure(text="= La velocidad es de {: 3f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
  # Función para convertir de km/h a m/s
 def convertir_kmph_a_ms():
@@ -25,7 +25,7 @@ def convertir_kmph_a_ms():
     ms = kmph * (1000 / 3600)  # Convierte de km/h a m/s
     label_ms.configure(text="= {} km/h equivalen a {:.2f} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
-# FUNCIONES PARA BOTONES 
+# FUNCIONES PARA IMAGENES
 
 def abrir_imagen(): #FORMULA ENERGIA CINETICA
     global imagen_mostrada
@@ -61,12 +61,28 @@ def abrir_imagen2(): #FORMULA PARA CALCULAR LA VELOCIDAD DE LA ENERGIA CINETICA.
         label_imagen.image = None
         imagen_mostrada = False
 
-
+# PROBLEMATICAS. FUNCION PARA CARGAR IMAGENES.
 
 def problematica1():
     global Imagen_mostrada2
     
     imagen = Image.open("Problematica1.png")
+    imagen = imagen.resize((480, 365))
+    imagen_tk = ImageTk.PhotoImage(imagen)
+
+    if not Imagen_mostrada2:
+        label_imagen3.configure(image=imagen_tk)
+        label_imagen3.image = imagen_tk
+        Imagen_mostrada2 = True
+    else:
+        label_imagen3.configure(image="")
+        label_imagen3.image = None
+        Imagen_mostrada2 = False
+
+def problematica2():
+    global Imagen_mostrada2
+    
+    imagen = Image.open("Problematica2.png")
     imagen = imagen.resize((480, 365))
     imagen_tk = ImageTk.PhotoImage(imagen)
 
@@ -195,7 +211,7 @@ button_problematica1.place(x=1060, y=530, height=50, width=250)
 # Widget Label para mostrar la imagen - problematica 1
 label_imagen3 = tk.Label(window, bg="#CCCCCC")
 label_imagen3.pack()
-label_imagen3.place(x=411, y=18) 
+label_imagen3.place(x=411, y=18)  # Medidas en donde estara ubicada la imagen "Problematica 1, 2, 3"
 
 
 
