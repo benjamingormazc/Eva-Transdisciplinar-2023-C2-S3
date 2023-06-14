@@ -35,7 +35,6 @@ def convertir_kmph_a_ms():
 
 def abrir_imagen(): #FORMULA ENERGIA CINETICA
     global imagen_mostrada
-   
     
     imagen = Image.open("Formula.png")
     imagen = imagen.resize((480, 260))
@@ -242,7 +241,7 @@ label.place(x=60, y=530)
 # Asociar la tecla Escape a la función de cierre de ventana
 window.bind('<Escape>', cerrar_ventana)
 
-# Ejecutar el bucle principal de la ventana
+# Ejecutar el bucle principal de la ventana. (Si este codigo NO esta, no se mostrara la interfaz)
 window.mainloop()
 
 #FALTA AÑADIR GRAFICO ADECUADO. Ya con eso, el codigo estaria completo.
