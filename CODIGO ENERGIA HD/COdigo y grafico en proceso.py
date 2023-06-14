@@ -2,21 +2,26 @@ import tkinter as tk
 from PIL import Image, ImageTk
 
 imagen_mostrada = False
-Imagen_mostrada2 = False
+Imagen_mostrada2 = False      
+
+
+#-------------------------------------------------------------------#
+"Se crean 3 funciones principales para calcular energia cinetica, velocidad y km/h a m/s."
+#--------------------------------------------------------------------#
 
 # Función para calcular la energía cinética y actualizar el gráfico de ondas
 def calcular_energia_cinetica():
     masa = float(entry_masa.get())  # Obtiene el valor de masa ingresado
     velocidad = float(entry_velocidad.get())  # Obtiene el valor de velocidad ingresado
     energia_cinetica = 0.5 * masa * velocidad**2  # Calcula la energía cinética
-    mensaje_energia_cinetica = "= La energía cinética es de {:.2f} Joule(s)".format(energia_cinetica)
+    mensaje_energia_cinetica = "= La energía cinética es de {:.2f} Joule(s)".format(energia_cinetica) #Se crea un mensaje utilizando los "" que se muestra junto al resultado de energia.
     label_energia_cinetica.configure(text=mensaje_energia_cinetica, fg="#004d99")  # Actualiza el texto y color de la etiqueta
     
 # Función para calcular la velocidad
 def calcular_velocidad():
     masa = float(entry_masa_velocidad.get())  # Obtiene el valor de masa ingresado
     energia = float(entry_energia.get())  # Obtiene el valor de energía ingresado
-    velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad
+    velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad - Formula
     label_velocidad_resultado.configure(text="= La velocidad es de {:.3f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
  # Función para convertir de km/h a m/s
@@ -25,7 +30,8 @@ def convertir_kmph_a_ms():
     ms = kmph * (1000 / 3600)  # Convierte de km/h a m/s
     label_ms.configure(text="= {} km/h equivalen a {:.2f} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
-# FUNCIONES PARA IMAGENES
+ #----------------------------------------------------------------------------------------------------------------------#
+    " FUNCIONES PARA IMAGENES ---- crean funciones utilizando la biblioteca Tkinter para mostrar imagenes"
 
 def abrir_imagen(): #FORMULA ENERGIA CINETICA
     global imagen_mostrada
