@@ -1,13 +1,5 @@
 import tkinter as tk
-from PIL import Image, ImageTk
-import matplotlib.pyplot as plt
-import numpy as np
-#++++++++++++++++++++++
-# Deficion de variables
-#++++++++++++++++++++++
-imagen_mostrada = False
 
-#++++++++++++++++++++++++++++++++++++++++++
 # Función para calcular la energía cinética
 #++++++++++++++++++++++++++++++++++++++++++
 def calcular_energia_cinetica():
@@ -71,7 +63,7 @@ def plot_graph():
 def cerrar_ventana(event):
     if event.keysym == 'Escape':
         window.destroy()
-#+++++++++++++++++++++++++++++++++
+
 # Creación de la ventana principal
 #+++++++++++++++++++++++++++++++++
 window = tk.Tk()
@@ -175,31 +167,7 @@ button_convertir.place(x=19, y=485)
 #++++++++++++++++++++++++++++++++++++++++++++++++++++
 label_ms = tk.Label(window, text="=", fg="dark blue", bg="#CCCCCC", font=("Arial", 8,"bold"))
 label_ms.place(x=79, y=486)
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Botón para abrir la imagen - formula energia cinetica
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++
-label = tk.Label(window, text= "¿Necesitas ayuda?", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
-label.place(x=60, y=530)
-button_abrir_imagen = tk.Button(window, text="Ver formula de energia cinetica.", font=("Tahoma", 8), command=abrir_imagen)
-button_abrir_imagen.pack()
-button_abrir_imagen.place(x=79, y=600, height=50)
-#+++++++++++++++++++++++++++++++++++++
-# Boton para mostrar el grafico lineal
-#+++++++++++++++++++++++++++++++++++++
-button_grafico = tk.Button(window, text="Mostrar Gráfico", command=plot_graph)
-button_grafico.place(x=79, y=700)
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Widget Label para mostrar la imagen - formula energia cinetica
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-label_imagen = tk.Label(window, bg="#CCCCCC")
-label_imagen.pack()
-label_imagen.place(x=412, y=435) #resolución para FHD= x490, y510
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Ventana llamada "Problematicas a simular" para la problematica
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-label = tk.Label(window, text= "Problematicas", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
-label.place(x=1100, y=460)
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 # Asociar la tecla Escape a la función de cierre de ventana
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 window.bind('<Escape>', cerrar_ventana)

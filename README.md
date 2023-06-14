@@ -1,6 +1,7 @@
 # Eva-Transdisciplinar-2023-C2-S3
 proyecto programación y física. 
 
+
 En este proyecto vamos a simular 3 eventos fisicos:
 
 1.- Calcular la energia cinetica en una pista de patinaje.
