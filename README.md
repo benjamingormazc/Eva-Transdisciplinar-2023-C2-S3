@@ -1,11 +1,7 @@
 # Eva-Transdisciplinar-2023-C2-S3
 proyecto programación y física. 
 
-# indice
-# breve historia
-# ¿Cuantos Joules de energía cinética tienes tras alcanzar esa velocidad?
-# La energía cinética
-# La comprensión de la energía cinética
+
 En este proyecto vamos a simular 3 eventos fisicos:
 
 1.- Calcular la energia cinetica en una pista de patinaje.
