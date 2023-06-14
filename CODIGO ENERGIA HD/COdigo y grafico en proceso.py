@@ -4,14 +4,14 @@ from PIL import Image, ImageTk
 imagen_mostrada = False
 Imagen_mostrada2 = False
 
-# Función para calcular la energía cinética
+# Función para calcular la energía cinética y actualizar el gráfico de ondas
 def calcular_energia_cinetica():
     masa = float(entry_masa.get())  # Obtiene el valor de masa ingresado
     velocidad = float(entry_velocidad.get())  # Obtiene el valor de velocidad ingresado
     energia_cinetica = 0.5 * masa * velocidad**2  # Calcula la energía cinética
     mensaje_energia_cinetica = "= La energía cinética es de {:.2f} Joule(s)".format(energia_cinetica)
     label_energia_cinetica.configure(text=mensaje_energia_cinetica, fg="#004d99")  # Actualiza el texto y color de la etiqueta
-
+    
 # Función para calcular la velocidad
 def calcular_velocidad():
     masa = float(entry_masa_velocidad.get())  # Obtiene el valor de masa ingresado
@@ -105,6 +105,7 @@ window = tk.Tk()
 window.title("Cálculo de Energía Cinética")
 window.attributes('-fullscreen', True)  # Ejecutar en pantalla completa
 window.configure(bg="#CCCCCC")  # Establece el color de fondo en gris
+
 
 fondo = Image.open("fondouwu.png")
 fondo = fondo.resize((window.winfo_screenwidth(), window.winfo_screenheight()))
@@ -237,3 +238,5 @@ window.bind('<Escape>', cerrar_ventana)
 
 # Ejecutar el bucle principal de la ventana
 window.mainloop()
+
+#FALTA AÑADIR GRAFICO ADECUADO. Ya con eso, el codigo estaria completo.
