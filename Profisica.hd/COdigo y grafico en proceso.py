@@ -17,7 +17,7 @@ def calcular_velocidad():
     masa = float(entry_masa_velocidad.get())  # Obtiene el valor de masa ingresado
     energia = float(entry_energia.get())  # Obtiene el valor de energía ingresado
     velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad
-    label_velocidad_resultado.configure(text="= La velocidad es de {: 3f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_velocidad_resultado.configure(text="= La velocidad es de {:.3f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
 
  # Función para convertir de km/h a m/s
 def convertir_kmph_a_ms():
@@ -117,7 +117,7 @@ label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
 # Etiqueta y campo de entrada para la masa - ENERGIA CINETICA -----------------------------------------------------------------------------------------------------------@
 
 label_masa = tk.Label(window, text="", fg="dark blue", bg="#CCCCCC")
-label_masa = tk.Label(window, text="Calcular energía cinética.", bg="#CCCCCC", font=("Arial", 12, "bold"))
+label_masa = tk.Label(window, text="Calcular energía cinética", fg="dark blue", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_masa.place(x= 10, y=16 )
 label_masa = tk.Label(window, text="", fg="dark blue", bg="#CCCCCC")
 label_masa = tk.Label(window, text="Ingrese los datos de masa.", bg="#CCCCCC")
@@ -142,9 +142,9 @@ label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 # Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO
-label_masa_velocidad = tk.Label(window, text="Calcular velocidad teniendo.", bg="#CCCCCC", font=("Arial", 12, "bold"))
+label_masa_velocidad = tk.Label(window, text="Calcular velocidad teniendo", fg="dark blue", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_masa_velocidad.place(x=10, y=200)
-label_masa_velocidad = tk.Label(window, text="masa y energia.", bg="#CCCCCC", font=("Arial", 12, "bold")) 
+label_masa_velocidad = tk.Label(window, text="masa y energia", fg="dark blue", bg="#CCCCCC", font=("Arial", 13, "bold")) 
 label_masa_velocidad.place(x=10, y=230)
 label_masa_velocidad_texto = tk.Label(window, text="Ingrese los datos de masa:", bg="#CCCCCC")
 label_masa_velocidad_texto.place(x=10, y=264)
@@ -168,7 +168,7 @@ label_velocidad_resultado.place(x=79, y=374)
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 # Etiqueta y campo de entrada para la conversión de km/h a m/s - CONVERSOR VELOCIDAD KM/H A M/S
 
-label_kmph = tk.Label(window, text="Convierte km/h a m/s.", bg="#CCCCCC", font=("Arial", 12, "bold"))
+label_kmph = tk.Label(window, text="Convierte km/h a m/s", fg="dark blue", bg="#CCCCCC", font=("Arial", 13, "bold"))
 label_kmph.place(x=10, y=410)
 label_kmph = tk.Label(window, text="Ingrese km/h aqui :", bg="#CCCCCC")
 label_kmph.place(x=10,y=450)
@@ -226,10 +226,10 @@ label_imagen2.place(x=411, y=18)
 
 
 #Ventana llamada "Problematicas a simular" para la problematica @
-label = tk.Label(window, text= "Problematicas a simular", fg= "#E02121",bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label = tk.Label(window, text= "Problematicas a simular", fg= "dark blue",bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
 label.place(x=1050, y=460)
 #Ventana llamada "¿necesitas ayuda?" para 
-label = tk.Label(window, text= "¿Necesitas ayuda?", fg="#E02121", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
+label = tk.Label(window, text= "¿Necesitas ayuda?", fg="dark blue", bg="#CCCCCC", font=("Comic Sans MS", 18, "bold"))
 label.place(x=60, y=530)
 
 # Asociar la tecla Escape a la función de cierre de ventana
