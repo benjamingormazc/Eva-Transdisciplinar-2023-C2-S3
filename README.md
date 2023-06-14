@@ -7,12 +7,12 @@ En este proyecto vamos a simular 3 eventos fisicos:
 2.- Calcular la velocidad teniendo como datos energia y masa.
 3.- Calcular y comparas dos valores de energia.
 
-Breve historia de la primera problematica: 
+# Breve historia de la primera problematica: 
 
 "Imagina que estas en una pista de patinaje y tienes una masa de 80kg. Decides tomar impulso y deslizarte a
  través de la pista. Comienzas desde el reposo y aceleras gradualmente hasta alcanzar una velocidad de 12m/s. 
 
-¿Cuantos Joules de energía cinética tienes tras alcanzar esa velocidad?"
+# ¿Cuantos Joules de energía cinética tienes tras alcanzar esa velocidad?"
 
 Para calcular y obtener el resultado, se debe utilizar la formula de la energia cinetica (1/2 * m * v al cuadrado)
 En este caso, tenemos los datos de masa (80kg) y velocidad alcanzada (12 m/s).
