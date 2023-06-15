@@ -1,7 +1,8 @@
 # Eva-Transdisciplinar-2023-C2-S3
 proyecto programación y física acerca de la energía cinética.
-# descripcion 
-En este proyecto se simulan tres eventos relacionados con la energía cinética: calcularla en una pista de patinaje, obtener la velocidad a partir de energía y masa, y comparar valores de energía. 
+# Descripcion 
+
+En este proyecto se simularán tres eventos relacionados con la energía cinética: Calcular la energia cinética en una pista de patinaje, obtener la velocidad a partir de energía y masa, y comparar valores de energía. 
 
 * La energía cinética es la energía del movimiento y se deriva de la transformación de otras formas de energía.
 
