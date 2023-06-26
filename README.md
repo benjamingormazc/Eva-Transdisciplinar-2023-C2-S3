@@ -60,6 +60,12 @@ desarrolló una formulación matemática más precisa de la energía cinética:
 
 (1/2 * m * v al cuadrado)
 
+# Aplicaciones
+# Programacion
+# Descripcion de herramientas utilizadas.
 # Guia de instalacion
+# Guia de uso
+# Enlace a video 
+# Conclusion
 
 ------------------------------------------------------ en proceso ----------------------------------------------------------
