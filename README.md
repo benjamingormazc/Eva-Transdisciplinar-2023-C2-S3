@@ -24,7 +24,7 @@ sin antes transformar los km/h a m/s con la Fórmula " (km/h) * (1/3.6) ".
 Para obtener el valor de la energia cinética primero debebemos obtener los metros/segundos (transformar los km/h a m/s) = 60 * (1/3.6) = 16.67.
 Con la incógnita resuelta, podemos aplicar la formula matematica de la Ec = 1/2 * 1000 * 16.67² = 138944.4.
 
-En este caso, el automóvil tiene 138944.4 Joules.
+En este caso, el automóvil tiene una cantidad de  138944.4 Joules.
 
 
 
