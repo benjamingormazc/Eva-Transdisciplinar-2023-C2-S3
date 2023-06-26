@@ -60,13 +60,6 @@ desarrolló una formulación matemática más precisa de la energía cinética:
 
 (1/2 * m * v al cuadrado)
 
-# Aplicaciones
-# Programacion
-# Descripcion de herramientas utilizadas.
-# Guia de instalacion
-# Guia de uso
-# Enlace a video 
-# Conclusion
 
 
 # Aplicaciones 
@@ -86,3 +79,5 @@ Descripción de herramientas utilizadas:
 Se utiliza la biblioteca Tkinter para insertar imágenes y widgets en la app. 
 
 Se utiliza la biblioteca matplotlib para crear un gráfico 2D que simule la energía cinética.
+
+# GUIA DE INSTALACION
