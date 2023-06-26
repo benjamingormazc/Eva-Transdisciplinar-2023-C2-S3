@@ -68,4 +68,21 @@ desarrolló una formulación matemática más precisa de la energía cinética:
 # Enlace a video 
 # Conclusion
 
------------------------------------------------------- en proceso ----------------------------------------------------------
+
+# Aplicaciones 
+
+Se utiliza el programa de visual studio code para ejecutar la carpeta que contiene el código de la app. 
+
+Programación: 
+
+Se instalan las bibliotecas correspondientes, se crean las funciones para calcular energía cinética, velocidad, y además una función extra para transformar km/h a m/s. 
+
+Se ajustan los widgets de texto y ventanas para ingresar datos, al igual que el gráfico y botones. 
+
+Además, se añaden dos problemáticas a simular en la misma aplicación junto a sus correspondientes respuestas. 
+
+Descripción de herramientas utilizadas: 
+
+Se utiliza la biblioteca Tkinter para insertar imágenes y widgets en la app. 
+
+Se utiliza la biblioteca matplotlib para crear un gráfico 2D que simule la energía cinética.
