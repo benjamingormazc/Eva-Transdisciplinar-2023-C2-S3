@@ -84,14 +84,4 @@ agregar botones, menús, cuadros de texto, entre otros.
 
 
 
-Se ajustan los widgets de texto y ventanas para ingresar datos, al igual que el gráfico y botones. 
-
-Además, se añaden dos problemáticas a simular en la misma aplicación junto a sus correspondientes respuestas. 
-
-Descripción de herramientas utilizadas: 
-
-Se utiliza la biblioteca Tkinter para insertar imágenes y widgets en la app. 
-
-Se utiliza la biblioteca matplotlib para crear un gráfico 2D que simule la energía cinética.
-
 # GUIA DE INSTALACION
