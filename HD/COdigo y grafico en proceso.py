@@ -14,20 +14,20 @@ def calcular_energia_cinetica():
     velocidad = float(entry_velocidad.get())  # Obtiene el valor de velocidad ingresado
     energia_cinetica = 0.5 * masa * velocidad**2  # Calcula la energía cinética
     mensaje_energia_cinetica = "= La energía cinética es de {:.2f} Joule(s)".format(energia_cinetica) #Se crea un mensaje utilizando los "" que se muestra junto al resultado de energia.
-    label_energia_cinetica.configure(text=mensaje_energia_cinetica, fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_energia_cinetica.configure(text=mensaje_energia_cinetica, fg="#6878ee")  # Actualiza el texto y color de la etiqueta
     
 # Función para calcular la velocidad
 def calcular_velocidad():
     masa = float(entry_masa_velocidad.get())  # Obtiene el valor de masa ingresado
     energia = float(entry_energia.get())  # Obtiene el valor de energía ingresado
     velocidad = (2 * energia / masa) ** 0.5  # Calcula la velocidad - Formula
-    label_velocidad_resultado.configure(text="= La velocidad es de {:.3f} m/s".format(velocidad), fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_velocidad_resultado.configure(text="= La velocidad es de {:.3f} m/s".format(velocidad), fg="#6878ee")  # Actualiza el texto y color de la etiqueta
 
  # Función para convertir de km/h a m/s
 def convertir_kmph_a_ms():
     kmph = float(entry_kmph.get())  # Obtiene el valor de km/h ingresado
     ms = kmph * (1000 / 3600)  # Convierte de km/h a m/s
-    label_ms.configure(text="= {} km/h equivalen a {:.2f} m/s".format(kmph, ms), fg="#004d99")  # Actualiza el texto y color de la etiqueta
+    label_ms.configure(text="= {} km/h equivalen a {:.2f} m/s".format(kmph, ms), fg="#6878ee")  # Actualiza el texto y color de la etiqueta
 
  #----------------------------------------------------------------------------------------------------------------------#
     " FUNCIONES PARA IMAGENES ---- crean funciones utilizando la biblioteca Tkinter para mostrar imagenes"
@@ -121,49 +121,49 @@ label_fondo.place(x=0, y=0, relwidth=1, relheight=1)
 
 # Etiqueta y campo de entrada para la masa - ENERGIA CINETICA -----------------------------------------------------------------------------------------------------------@
 
-label_masa = tk.Label(window, text="", fg="dark blue", bg="#389a4d")
-label_masa = tk.Label(window, text="Calcular energía cinética", fg="dark blue", bg="#389a4d", font=("Arial", 13, "bold"))
+label_masa = tk.Label(window, text="Calcular energía cinética", fg="#cdbe0e", bg="black", font=("Arial", 13, "bold"))
 label_masa.place(x= 10, y=16 )
 
-label_masa = tk.Label(window, text="", fg="dark blue", bg="#389a4d")
-label_masa = tk.Label(window, text="Ingrese los datos de masa.", bg="#389a4d")
+label_masa = tk.Label(window, text="Ingrese los datos de masa:", fg="#cdbe0e", bg="black")
 label_masa.place(x= 10, y= 50)
 
-label_masa = tk.Label(window, text="Kg", bg="#389a4d", font=("Arial", 8,"bold"))
+label_masa = tk.Label(window, text="Kg", fg= "white", bg="black", font=("Arial", 8,"bold"))
 label_masa.place(x= 110, y= 75)
 entry_masa = tk.Entry(window, text="",fg="black", font=("Arial", 8,"bold"))
 entry_masa.place(x = 20, y = 75, width=75)
 
-# Etiqueta y campo de entrada para la velocidad - ENERGIA CINETICA
-label_velocidad = tk.Label(window, text="Ingrese los datos de velocidad.", bg="#389a4d")
+# Etiqueta y campo de entrada para la VELOCIDAD
+label_velocidad = tk.Label(window, text="Ingrese los datos de velocidad:", fg="#cdbe0e", bg="black")
 label_velocidad.place(x=10, y=100)
 
-label_velocidad = tk.Label(window, text="m/s", bg="#389a4d", font=("Arial", 8,"bold"))
+label_velocidad = tk.Label(window, text="m/s", fg= "white", bg="black", font=("Arial", 8,"bold"))
 label_velocidad.place(x= 110, y= 120)
 
 entry_velocidad = tk.Entry(window, text="",fg="black", font=("Arial", 8,"bold"))
 entry_velocidad.place(x=20, y=120, width=75)
 
 # Botón para calcular la energía cinética - ENERGIA CINETICA
+
 button_calcular = tk.Button(window, text="Calcular", command=lambda: [calcular_energia_cinetica()])
 button_calcular.place(x=19, y=155)
 
 # Etiqueta para mostrar el valor de la energía cinética calculada - ENERGIA CINETICA 
-label_energia_cinetica = tk.Label(window, text="=", fg="dark blue", bg="#389a4d", font=("Arial", 8,"bold"))
+
+label_energia_cinetica = tk.Label(window, text="=", fg="#8b8111", bg="black", font=("Arial", 8,"bold"))
 label_energia_cinetica.place(x=79, y=155)
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 # Etiqueta y campo de entrada para la masa en el cálculo de la velocidad - CALCULO
-label_masa_velocidad = tk.Label(window, text="Calcular velocidad teniendo", fg="dark blue", bg="#389a4d", font=("Arial", 13, "bold"))
+label_masa_velocidad = tk.Label(window, text="Calcular velocidad teniendo", fg="#cdbe0e", bg="black", font=("Arial", 13, "bold"))
 label_masa_velocidad.place(x=10, y=200)
 
-label_masa_velocidad = tk.Label(window, text="masa y energia", fg="dark blue", bg="#389a4d", font=("Arial", 13, "bold")) 
+label_masa_velocidad = tk.Label(window, text="masa y energia", fg="#cdbe0e", bg="black", font=("Arial", 13, "bold")) 
 label_masa_velocidad.place(x=10, y=230)
 
-label_masa_velocidad_texto = tk.Label(window, text="Ingrese los datos de masa:", bg="#389a4d")
+label_masa_velocidad_texto = tk.Label(window, text="Ingrese los datos de masa:", fg="#cdbe0e", bg="black")
 label_masa_velocidad_texto.place(x=10, y=264)
 
-label_masa_velocidad_unidad = tk.Label(window, text="Kg", bg="#389a4d", font=("Arial", 8, "bold"))
+label_masa_velocidad_unidad = tk.Label(window, text="Kg", fg= "white", bg="black", font=("Arial", 8, "bold"))
 label_masa_velocidad_unidad.place(x=110, y=289)
 
 entry_masa_velocidad = tk.Entry(window, text="", fg="black", font=("Arial", 8, "bold"))
@@ -171,13 +171,13 @@ entry_masa_velocidad.place(x=20, y=289, width=75)
 
 # Etiqueta y campo de entrada para la energía en el cálculo de la velocidad
 
-label_energia_texto = tk.Label(window, text="Ingrese los datos de energía:", bg="#389a4d")
+label_energia_texto = tk.Label(window, text="Ingrese los datos de energía:", fg="#cdbe0e", bg="black")
 label_energia_texto.place(x=10, y=314)
 
 entry_energia = tk.Entry(window, text="", fg="black", font=("Arial", 8, "bold"))
 entry_energia.place(x=20, y=339, width=75)
 
-label_energia_unidad = tk.Label(window, text="Joule(s)", bg="#389a4d", font=("Arial", 8, "bold"))
+label_energia_unidad = tk.Label(window, text="Joule(s)", fg= "white", bg="black", font=("Arial", 8, "bold"))
 label_energia_unidad.place(x=110, y=339)
 
 # Botón para calcular la velocidad
@@ -187,22 +187,22 @@ button_calcular_velocidad.place(x=19, y=374)
 
 # Etiqueta para mostrar el resultado del cálculo de la velocidad
 
-label_velocidad_resultado = tk.Label(window, text="=", fg="dark blue", bg="#389a4d", font=("Arial", 8, "bold"))
+label_velocidad_resultado = tk.Label(window, text="=", fg="#8b8111", bg="black", font=("Arial", 8, "bold"))
 label_velocidad_resultado.place(x=79, y=374)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 # Etiqueta y campo de entrada para la conversión de km/h a m/s - CONVERSOR VELOCIDAD KM/H A M/S
 
-label_kmph = tk.Label(window, text="Convierte km/h a m/s", fg="dark blue", bg="#389a4d", font=("Arial", 13, "bold"))
+label_kmph = tk.Label(window, text="Convierte km/h a m/s", fg="#cdbe0e", bg="black", font=("Arial", 13, "bold"))
 label_kmph.place(x=10, y=410)
 
-label_kmph = tk.Label(window, text="Ingrese km/h aqui :", bg="#389a4d")
+label_kmph = tk.Label(window, text="Ingrese km/h aqui :", fg="#cdbe0e", bg="black")
 label_kmph.place(x=10,y=450)
 
 entry_kmph = tk.Entry(window, text="",fg="black", font=("Arial", 8,"bold"))
 entry_kmph.place(x=120, y=450, width=30)
 
-label_kmph = tk.Label(window, text="km/h.", bg="#389a4d", font=("Arial", 8,"bold"))
+label_kmph = tk.Label(window, text="km/h.", fg= "white", bg="black", font=("Arial", 8,"bold"))
 label_kmph.place(x= 159, y= 450)
 
 # Botón para convertir de km/h a m/s
@@ -212,14 +212,14 @@ button_convertir.place(x=19, y=485)
 
 # Etiqueta para mostrar el resultado de la conversión
 
-label_ms = tk.Label(window, text="=", fg="dark blue", bg="#389a4d", font=("Arial", 8,"bold"))
+label_ms = tk.Label(window, text="=", fg="#8b8111", bg="black", font=("Arial", 8,"bold"))
 label_ms.place(x=79, y=486)
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------@
 
 #Ventana llamada "¿necesitas ayuda?" 
 
-label = tk.Label(window, text= "¿Necesitas ayuda?", fg="dark blue", bg="#389a4d", font=("Comic Sans MS", 20, "bold"))
+label = tk.Label(window, text= "¿Necesitas ayuda?", fg="#cdbe0e", bg="black", font=("Comic Sans MS", 20, "bold"))
 label.place(x=55, y=540)
 
 # Botón para abrir la imagen - formula energia cinetica
@@ -233,7 +233,7 @@ button_abrir_imagen2 = tk.Button(window, text="Ver formula de velocidad de energ
 button_abrir_imagen2.place(x=70, y=680, height=50)
 
 # Widget Label para mostrar la imagen - formula velocidad de energia y energia cinetica.
-label_imagen= tk.Label(window)
+label_imagen= tk.Label(window, bg="black")
 label_imagen.pack()
 label_imagen.place(x=415, y=435)
 
@@ -242,7 +242,7 @@ label_imagen.place(x=415, y=435)
 
 # Ventana de texto llamada "Problematicas a simular" 
 
-label = tk.Label(window, text= "Problemáticas a simular", fg= "dark blue",bg="#389a4d", font=("Comic Sans MS", 20, "bold"))
+label = tk.Label(window, text= "Problemáticas a simular", fg= "#cdbe0e",bg="black",font=("Comic Sans MS", 20, "bold"))
 label.place(x=1000, y=460)
 
 button_problematica1 = tk.Button(window, text="  Ver problema #1  ", font=("Comic Sans MS", 9, "bold"), command=problematica1)
@@ -255,7 +255,7 @@ button_problematica1.place(x=1020, y=600, height=50, width=250)
 
 # Widget Label para mostrar la imagen - problematica 1 y 2
 
-label_imagen2 = tk.Label(window)
+label_imagen2 = tk.Label(window, bg="black")
 label_imagen2.pack()
 label_imagen2.place(x=417, y=25) 
 
