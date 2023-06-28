@@ -90,8 +90,13 @@ Estas son solo algunas aplicaciones de la energía cinética en la vida diaria. 
 Se utiliza el programa de Visual Studio Code para ejecutar y modificar el código presente en la carpeta.
 Ademas, se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
 agregar botones, menús, cuadros de texto, entre otros.
+                                     
+                                     TKINTER
 
+![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/34f4beb0-dba1-4b1e-b59e-23c624518eba)
 
-
+                                      VISUAL STUDIO CODE                                 
+                                      
+![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/cfd92a86-88f3-42e2-ab9d-eea548e2bc8a)
 
 # GUIA DE INSTALACION
