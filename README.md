@@ -68,7 +68,12 @@ desarrolló una formulación matemática más precisa de la energía cinética:
 
 
 
-# Aplicaciones 
+# Aplicaciones en la vida d
+
+
+
+
+
 
 Se utiliza el programa de visual studio code para ejecutar la carpeta que contiene el código de la app. 
 
