@@ -79,7 +79,7 @@ Juegos y juguetes: Muchos juguetes y juegos infantiles están diseñados para ap
 
 Estas son solo algunas aplicaciones de la energía cinética en la vida diaria. La energía cinética es una forma importante de energía que se encuentra en diferentes aspectos de nuestro entorno y se utiliza de diversas formas para realizar trabajo y generar movimiento
 
-        un claro ejemplo de energia cinetl desinflarse
+              un claro ejemplo de energia cinetica seria un globo al  desinflarse
 
 ![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/cf7fd077-48fe-4cd4-845f-7270af6570dc)
 
