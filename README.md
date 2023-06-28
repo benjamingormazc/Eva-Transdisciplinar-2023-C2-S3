@@ -21,6 +21,7 @@ Recuerda transformar km/h a m/s de ser necesario.
 Para calcular y obtener el resultado, se debe utilizar la fórmula de la energia cinética : (1/2 * masa * V²)
 además, considerar esta otra fórmula que es necesaria en la resolución del problema:  (km/h) * (1/3.6) la cual
 transforma Km/h a m/s.
+![Formula](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/1034e102-8e3d-49e8-9ea0-2704a54faf5b)
 
 # Resolución de la problematica:
 
