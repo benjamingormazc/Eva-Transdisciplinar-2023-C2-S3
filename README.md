@@ -88,7 +88,8 @@ Estas son solo algunas aplicaciones de la energía cinética en la vida diaria. 
 # a.- Herramientas y bibiotecas utilizadas:
 
 Se utiliza el programa de Visual Studio Code para ejecutar y modificar el código presente en la carpeta.
-Ademas, se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
+Ademas, 
+se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
 agregar botones, menús, cuadros de texto, entre otros.
                                      
                                      TKINTER
