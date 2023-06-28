@@ -1,11 +1,8 @@
 # Eva-Transdisciplinar-2023-C2-S3
 
-<<<<<<< HEAD
 
-En este proyecto vamos a simular 3 eventos fisicos:
-=======
-# Descripcion 
->>>>>>> 394016714ea0ec4cba00a98fe04288a0f3d51d9f
+# Descripción 
+
 
 En este proyecto se resolverán dos eventos relacionados a la energía cinética utilizando 
 una calculadora adecuada para ello. Las problemáticas son:
@@ -17,7 +14,7 @@ una calculadora adecuada para ello. Las problemáticas son:
 
 " Una mujer conduce un automóvil con una masa de 1000Kg, y se desplaza con una velocidad de
 60Km/h hacia la izquierda. . .¿Cuantos Joules de energía cinética tiene el automóvil en movimiento?
-Recuerda transformar km/h a m/s de ser necesario. "
+Recuerda transformar km/h a m/s de ser necesario. 
 
 # Matemática empleada: 
 
