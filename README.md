@@ -81,9 +81,9 @@ desarrolló una fórmula matemática mas precisa (1/2 * m * v²)
 Se utiliza el programa de Visual Studio Code para ejecutar y modificar el código presente en la carpeta.
 Ademas, se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
 agregar botones, menús, cuadros de texto, entre otros.
-libreria tkinter 
+                                libreria tkinter 
 ![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/a0e9710f-0446-412a-9028-cfaefa71b3d3)
-visal studio code
+                      visal studio code
 ![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/f1036a05-6809-417d-979b-76ad61f5497e)
 
 
