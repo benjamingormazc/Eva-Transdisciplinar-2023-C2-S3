@@ -68,20 +68,36 @@ desarrolló una fórmula matemática mas precisa (1/2 * m * v²)
 
 
 
-# Aplicaciones en la vida d
+# Aplicaciones en la vida 
+La energía cinética se refiere a la energía asociada al movimiento de un objeto. A continuación, te mencionaré algunas aplicaciones de la energía cinética en la vida cotidiana:
 
+Transporte: Los vehículos en movimiento, como automóviles, bicicletas, trenes y aviones, utilizan la energía cinética para desplazarse. La energía cinética se genera a partir del movimiento de las ruedas, las hélices o los motores, y se convierte en movimiento útil.
 
+Deportes: En diversos deportes, como el fútbol, el baloncesto o el tenis, la energía cinética está presente en cada movimiento que realiza un jugador al golpear una pelota, correr o saltar. También se utiliza en deportes como el atletismo, la natación o el ciclismo, donde la velocidad y el movimiento son fundamentales.
 
+Juegos y juguetes: Muchos juguetes y juegos infantiles están diseñados para aprovechar la energía cinética. Algunos ejemplos incluyen los coches de juguete que se impulsan con un resorte, las pelotas que rebotan o los columpios que se balancean.
+
+Estas son solo algunas aplicaciones de la energía cinética en la vida diaria. La energía cinética es una forma importante de energía que se encuentra en diferentes aspectos de nuestro entorno y se utiliza de diversas formas para realizar trabajo y generar movimiento
+
+              un claro ejemplo de energia cinetica seria un globo al  desinflarse
+
+![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/cf7fd077-48fe-4cd4-845f-7270af6570dc)
 
 # Programación: 
 
 # a.- Herramientas y bibiotecas utilizadas:
 
 Se utiliza el programa de Visual Studio Code para ejecutar y modificar el código presente en la carpeta.
-Ademas, se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
+Ademas, 
+se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
 agregar botones, menús, cuadros de texto, entre otros.
+                                     
+                                     TKINTER
 
+![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/34f4beb0-dba1-4b1e-b59e-23c624518eba)
 
-
+                                      VISUAL STUDIO CODE                                 
+                                      
+![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/cfd92a86-88f3-42e2-ab9d-eea548e2bc8a)
 
 # GUIA DE INSTALACION
