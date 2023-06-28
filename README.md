@@ -61,12 +61,10 @@ Sin embargo, el término "energía cinética" en sí no se utilizó hasta mucho 
 
 En el siglo XIX, durante la época de la Revolución Industrial, la comprensión de la energía cinética se desarrolló aún más.
 Uno de los científicos que contribuyó significativamente fue Gustave-Gaspard Coriolis, un ingeniero y matemático francés.
-En 1829, Coriolis introdujo el concepto de "trabajo vivo" (le travail vif en francés), que estaba relacionado con la energía cinética.
+En 1829, Coriolis introdujo el concepto de "trabajo vivo", que estaba relacionado con la energía cinética.
 
 Posteriormente, en la segunda mitad del siglo XIX, el físico británico William Thomson, también conocido como Lord Kelvin, 
-desarrolló una formulación matemática más precisa de la energía cinética:
-
-(1/2 * m * v al cuadrado)
+desarrolló una fórmula matemática mas precisa (1/2 * m * v²)
 
 
 
@@ -75,13 +73,16 @@ desarrolló una formulación matemática más precisa de la energía cinética:
 
 
 
+# Programación: 
+
+# a.- Herramientas y bibiotecas utilizadas:
+
+Se utiliza el programa de Visual Studio Code para ejecutar y modificar el código presente en la carpeta.
+Ademas, se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
+agregar botones, menús, cuadros de texto, entre otros.
 
 
-Se utiliza el programa de visual studio code para ejecutar la carpeta que contiene el código de la app. 
 
-Programación: 
-
-Se instalan las bibliotecas correspondientes, se crean las funciones para calcular energía cinética, velocidad, y además una función extra para transformar km/h a m/s. 
 
 Se ajustan los widgets de texto y ventanas para ingresar datos, al igual que el gráfico y botones. 
 
