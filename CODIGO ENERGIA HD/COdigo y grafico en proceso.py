@@ -3,8 +3,7 @@ from PIL import Image, ImageTk
 
 imagen_mostrada = False
 Imagen_mostrada2 = False
-masa = 0
-velocidad = 0
+
 
 # Función para calcular la energía cinética
 def calcular_energia_cinetica():
@@ -77,7 +76,7 @@ def problematica1():
         label_imagen2.image = imagen_tk
         Imagen_mostrada2 = True
     else:
-        label_imagen2.configure(image="")
+        label_imagen2.configure(image)
         label_imagen2.image = None
         Imagen_mostrada2 = False
 
