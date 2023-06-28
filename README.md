@@ -21,7 +21,6 @@ Recuerda transformar km/h a m/s de ser necesario.
 Para calcular y obtener el resultado, se debe utilizar la fórmula de la energia cinética : (1/2 * masa * V²)
 además, considerar esta otra fórmula que es necesaria en la resolución del problema:  (km/h) * (1/3.6) la cual
 transforma Km/h a m/s.
-![Formula](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/1034e102-8e3d-49e8-9ea0-2704a54faf5b)
 
 # Resolución de la problematica:
 
@@ -69,7 +68,16 @@ desarrolló una fórmula matemática mas precisa (1/2 * m * v²)
 
 
 
-# Aplicaciones en la vida d
+# Aplicaciones en la vida 
+La energía cinética se refiere a la energía asociada al movimiento de un objeto. A continuación, te mencionaré algunas aplicaciones de la energía cinética en la vida cotidiana:
+
+Transporte: Los vehículos en movimiento, como automóviles, bicicletas, trenes y aviones, utilizan la energía cinética para desplazarse. La energía cinética se genera a partir del movimiento de las ruedas, las hélices o los motores, y se convierte en movimiento útil.
+
+Deportes: En diversos deportes, como el fútbol, el baloncesto o el tenis, la energía cinética está presente en cada movimiento que realiza un jugador al golpear una pelota, correr o saltar. También se utiliza en deportes como el atletismo, la natación o el ciclismo, donde la velocidad y el movimiento son fundamentales.
+
+Juegos y juguetes: Muchos juguetes y juegos infantiles están diseñados para aprovechar la energía cinética. Algunos ejemplos incluyen los coches de juguete que se impulsan con un resorte, las pelotas que rebotan o los columpios que se balancean.
+
+Estas son solo algunas aplicaciones de la energía cinética en la vida diaria. La energía cinética es una forma importante de energía que se encuentra en diferentes aspectos de nuestro entorno y se utiliza de diversas formas para realizar trabajo y generar movimiento
 
 
 
@@ -81,17 +89,8 @@ desarrolló una fórmula matemática mas precisa (1/2 * m * v²)
 Se utiliza el programa de Visual Studio Code para ejecutar y modificar el código presente en la carpeta.
 Ademas, se utiliza la bibioteca de Tkinter para crear una interfaz grafica, en donde podemos diseñar ventanas,
 agregar botones, menús, cuadros de texto, entre otros.
-                                                     
-                                                      
-                                                      libreria tkinter 
-![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/a0e9710f-0446-412a-9028-cfaefa71b3d3)
-                     
-                      
-                      
-                      
-                      
-                     visual studio code
-![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/f1036a05-6809-417d-979b-76ad61f5497e)
+
+
 
 
 # GUIA DE INSTALACION
