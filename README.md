@@ -100,4 +100,9 @@ agregar botones, menús, cuadros de texto, entre otros.
                                       
 ![image](https://github.com/benjamingormazc/Eva-Transdisciplinar-2023-C2-S3/assets/134818819/cfd92a86-88f3-42e2-ab9d-eea548e2bc8a)
 
-# GUIA DE INSTALACION
+# video explicativo del readme
+https://drive.google.com/file/d/1APKA6naojE_2lu-pEHfSveNdONvQQ_Od/view
+
+# video explicativo del codigo 
+
+https://drive.google.com/file/d/1e6t5iXM7XUUay7nayqxxDuaohbXZcUSI/view?usp=sharing
